@@ -37,7 +37,14 @@ cc_test(
     #   sample9 (main)
     #   sample10 (main and takes a command line option and needs to be separate)
     srcs = [
-        "test/test_tugabudoire.cpp"
+        "googletest/samples/sample1_unittest.cc",
+        "googletest/samples/sample2_unittest.cc",
+        "googletest/samples/sample3_unittest.cc",
+        "googletest/samples/sample4_unittest.cc",
+        "googletest/samples/sample5_unittest.cc",
+        "googletest/samples/sample6_unittest.cc",
+        "googletest/samples/sample7_unittest.cc",
+        "googletest/samples/sample8_unittest.cc",
     ],
     linkstatic = 0,
     deps = [

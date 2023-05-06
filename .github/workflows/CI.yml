@@ -1,19 +1,15 @@
-name: CI Pipeline
-
+name: googletest-project
 on:
   push:
-    branches: [ "dev", "main" ]
-
-
-env:
-  BAZEL_CXXOPTS: -std=c++11
+    paths-ignore:
+      - 'resources/**'
+      - 'README.md'
 
 jobs:
-  Linux:
+  test-project:
+    name: Test Project
     runs-on: ubuntu-latest
     steps:
-
-      - uses: actions/checkout@v3
-      - run: touch WORKSPACE
-      - name: Tests
-        run: bazel test --cxxopt=-std=c++14 --features=external_include_paths --test_output=errors ...
+      - uses: actions/checkout@v2
+      - name: Test project with googletest.
+        uses: arvsrao/googletest-action@master
