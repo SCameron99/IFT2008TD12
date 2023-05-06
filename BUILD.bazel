@@ -30,3 +30,18 @@
 #
 #   Bazel Build for Google C++ Testing Framework(Google Test)
 
+cc_test(
+    name = "gtest_samples",
+    size = "small",
+    # All Samples except:
+    #   sample9 (main)
+    #   sample10 (main and takes a command line option and needs to be separate)
+    srcs = [
+        "test/test_tugabudoire.cpp"
+    ],
+    linkstatic = 0,
+    deps = [
+        "gtest_sample_lib",
+        ":gtest_main",
+    ],
+)
