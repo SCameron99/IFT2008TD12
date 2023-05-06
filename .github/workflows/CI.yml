@@ -1,0 +1,18 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "dev", "main" ]
+
+
+env:
+  BAZEL_CXXOPTS: -std=c++11
+
+jobs:
+  Linux:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v3
+      - name: Tests
+        run: bazel test --cxxopt=-std=c++14 --features=external_include_paths --test_output=errors ...
