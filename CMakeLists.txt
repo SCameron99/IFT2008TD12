@@ -15,5 +15,5 @@ add_executable(monprojet main.cpp Tugabudoire.cpp)
 
 enable_testing()
 
-add_subdirectory(tests)
+add_subdirectory(test)
 
