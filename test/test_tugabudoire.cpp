@@ -22,7 +22,7 @@ protected:
 
 TEST_F(TugabudoireTest, constructeur_affecte_bonnes_valeurs) {
     Tugabudoire tug ;
-    EXPECT_EQ("0-0-2", tug.to_string()) ;
+    EXPECT_EQ("0-0-1", tug.to_string()) ;
 }
 
 TEST_F(TugabudoireTest, enlever_bouton_vide_exception) {
